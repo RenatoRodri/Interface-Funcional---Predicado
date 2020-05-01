@@ -20,10 +20,8 @@ public class Program {
 		list.add(new Product("Grill", 40.00));
 		list.add(new Product("Notebook", 4000.00));
 		list.add(new Product("Cafeteira", 80.00));
-
-		Predicate<Product> pred = p-> p.getValue() >= 100.0;
 		
-		list.removeIf(pred);
+		list.removeIf(p -> p.getValue() >= 100.0);
 		
 		for(Product p: list) {
 			System.out.println(p);
