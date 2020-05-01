@@ -3,6 +3,7 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.function.Predicate;
 
 import inteteis.Product;
 import util.MyPredicates;
@@ -20,7 +21,9 @@ public class Program {
 		list.add(new Product("Notebook", 4000.00));
 		list.add(new Product("Cafeteira", 80.00));
 
-		list.removeIf(Product::SemmetodoStatic);
+		Predicate<Product> pred = p-> p.getValue() >= 100.0;
+		
+		list.removeIf(pred);
 		
 		for(Product p: list) {
 			System.out.println(p);
