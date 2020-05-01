@@ -27,6 +27,10 @@ public class Product {
 		Value = value;
 	}
 
+	public static boolean metodoStatic(Product p) {
+		return p.getValue() >= 100;
+	}
+	
 	@Override
 	public String toString() {
 		return "Product [name=" + name + ", Value=" + Value + "]";
