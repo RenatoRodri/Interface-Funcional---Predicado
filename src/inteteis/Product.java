@@ -27,6 +27,10 @@ public class Product {
 		Value = value;
 	}
 
+	public boolean SemmetodoStatic() {
+		return Value >= 100;
+	}
+	
 	public static boolean metodoStatic(Product p) {
 		return p.getValue() >= 100;
 	}
