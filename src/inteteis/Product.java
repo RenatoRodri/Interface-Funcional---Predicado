@@ -32,6 +32,10 @@ public class Product {
 		p.setValue(p.getValue() * 1.1);
 	}
 	
+	public void noStaticupadadeValueConsumer() {
+		setValue(getValue() * 1.1);
+	}
+	
 	
 	@Override
 	public String toString() {
