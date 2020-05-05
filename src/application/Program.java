@@ -3,6 +3,7 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.function.Consumer;
 
 import inteteis.Product;
 import util.UpadadePrice;
@@ -20,7 +21,9 @@ public class Program {
 		list.add(new Product("Notebook", 4000.00));
 		list.add(new Product("Cafeteira", 80.00));
 		
-		list.forEach(Product::noStaticupadadeValueConsumer);
+		Consumer<Product> cons = p-> {p.setValue(p.getValue() * 1.1);};
+		
+		list.forEach(cons);
 		
 		list.forEach(System.out::println);
 			
