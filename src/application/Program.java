@@ -21,9 +21,7 @@ public class Program {
 		list.add(new Product("Notebook", 4000.00));
 		list.add(new Product("Cafeteira", 80.00));
 		
-		Consumer<Product> cons = p-> {p.setValue(p.getValue() * 1.1);};
-		
-		list.forEach(cons);
+		list.forEach(p-> {p.setValue(p.getValue() * 1.1);});
 		
 		list.forEach(System.out::println);
 			
