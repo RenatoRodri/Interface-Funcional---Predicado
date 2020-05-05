@@ -21,7 +21,7 @@ public class Program {
 		list.add(new Product("Notebook", 4000.00));
 		list.add(new Product("Cafeteira", 80.00));
 		
-		List<String> names = list.stream().map(Product::Staticupercase).collect(Collectors.toList());
+		List<String> names = list.stream().map(Product::NoStaticToupercase).collect(Collectors.toList());
 		
 		names.forEach(System.out::println);
 		
