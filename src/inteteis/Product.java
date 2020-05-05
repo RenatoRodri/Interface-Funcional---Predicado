@@ -27,16 +27,8 @@ public class Product {
 		Value = value;
 	}
 
-	public boolean SemmetodoStatic() {
-		return Value >= 100;
-	}
-	
-	public static boolean metodoStatic(Product p) {
-		return p.getValue() >= 100;
-	}
-	
 	@Override
 	public String toString() {
-		return "Product [name=" + name + ", Value=" + Value + "]";
+		return "name = " + name + ", Value = " + String.format("%.2f", Value);
 	}
 }
