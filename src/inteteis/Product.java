@@ -27,6 +27,12 @@ public class Product {
 		Value = value;
 	}
 
+	
+	public static void UpdadeValueConsumer(Product p) {
+		p.setValue(p.getValue() * 1.1);
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "name = " + name + ", Value = " + String.format("%.2f", Value);
