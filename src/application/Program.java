@@ -3,10 +3,10 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 import inteteis.Product;
-import util.UpadadePrice;
+import util.ToUpercase;
 
 public class Program {
 
@@ -21,10 +21,9 @@ public class Program {
 		list.add(new Product("Notebook", 4000.00));
 		list.add(new Product("Cafeteira", 80.00));
 		
-		list.forEach(p-> {p.setValue(p.getValue() * 1.1);});
+		List<String> names = list.stream().map(new ToUpercase()).collect(Collectors.toList());
 		
-		list.forEach(System.out::println);
-			
+		names.forEach(System.out::println);
 		
 		
 		

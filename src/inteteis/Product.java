@@ -27,15 +27,9 @@ public class Product {
 		Value = value;
 	}
 
-	
-	public static void UpdadeValueConsumer(Product p) {
-		p.setValue(p.getValue() * 1.1);
+	public static String Staticupercase(Product p) {
+		return p.getName().toUpperCase();
 	}
-	
-	public void noStaticupadadeValueConsumer() {
-		setValue(getValue() * 1.1);
-	}
-	
 	
 	@Override
 	public String toString() {
